@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		/* CAMBIO 1: Diferenciar colores de contenedores */
+div.contenedor {
+    border: 2px dashed #69c; /* Azul claro para distinguir contenedores */
+    background-color: #f5fafc; /* Fondo suave */
+    margin: 15px;
+    padding: 10px;
+}
+
+/* CAMBIO 2: Mejorar la visibilidad de .contenido */
+.contenido {
+    margin-top: -20px; /* Más superposición */
+    margin-right: -15px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    background-color: #ffe4c4; /* Color más notorio */
+    border-left: 5px solid #ffa07a; /* Borde para destacar contenido */
+}
+
+/* CAMBIO 3: Hacer más evidentes .caja estándar y .alternativo */
+.caja {
+    border: 3px solid #808000;
+    background-color: #e0ffff; /* Más contraste */
+    color: #444;
+    box-shadow: 2px 2px 10px #ccc;
+}
+.caja.alternativo {
+    border: 3px dashed #556b2f;
+    background-color: #f0fff0;
+    box-sizing: border-box;
+    color: #2b331d;
+}
+
+/* CAMBIO 4: Marcar visualmente los spans inline vs inline-block */
+.caja.visual {
+    border: 2px solid #f39c12; /* Naranja */
+    background-color: #fffde4;
+    vertical-align: middle;
+}
+
+/* CAMBIO 5: Separar márgenes combinados más notoriamente en los párrafos */
+#primero {
+    margin-bottom: 40px;
+    border-bottom: 1px dotted #aaa;
+}
+#segundo {
+    margin-top: 30px;
+    border-top: 1px dotted #aaa;
+}
+
+	</style>
+</head>
+<body>
+    <div id="principal">
+    	<h1>Título principal</h1>
+    	<h2>Título secundario</h2>
+    	<p>Este párrafo contiene varios elementos en <span>línea</span> intercalados para poder distinguir como se <em>visualizan</em> y así poder <strong>ejemplificarlo</strong>.</p>
+    	<div class="caja">Esta caja hace uso del <em>modelo estándar</em>.</div>
+    	<div class="caja alternativo">Esta caja hace uso del <em>modelo alternativo</em>.</div>
+    	<div class="contenedor">
+        	<div class="contenido">Esta caja aplica un margen para superponerse a su contenedor.</div>
+    	</div>
+    	<div class="contenedor">
+        	<p id="primero">El margen inferior de este párrafo se va a combinar con el margen superior del siguiente.</p>
+        	<p id="segundo">El margen superior de este párrafo se va a combinar con el margen inferior del anterior.</p>
+    	</div>
+    	<p>En este párrafo tenemos un <span class="caja">span</span> que como es un elemento en línea, no respeta el ancho y largo, pero su margen y relleno pueden tapar partes próximas.</p>
+    	<p>Para evitar que el margen y relleno de un <span class="caja visual">span</span> pueden tapar partes próximas, aplicamos la propiedad <code>display:inline-block</code>.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>@layer en CSS</title>
+  <style>
+    /* Definición y orden explícito de capas para mejor mantenimiento */
+@layer reset, base, theme;
+
+/* Reset: limpiamos estilos por defecto */
+@layer reset {
+  button {
+    all: unset;
+    background: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* Base: estilos comunes y base */
+@layer base {
+  button {
+    padding: 10px 20px;
+    border: 1px solid gray;
+    background: lightgray;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* Theme: estilos temáticos que sobrescriben anteriores */
+@layer theme {
+  button {
+    background: indigo;
+    color: white;
+    border-radius: 8px;
+  }
+  /* Ejemplo de efectos adicionales */
+  button:hover {
+    background: darkmagenta;
+  }
+}
+
+/* Opcional: capa para forzar un estilo concreto */
+@layer utilities {
+  .forzado {
+    background: orange !important;
+    color: white;
+    font-weight: bold;
+  }
+}
+  </style>
+</head>
+<body>
+  <h2>Ejemplo con @layer</h2>
+  <button>Botón con capas</button>
+</body>
+</html>
