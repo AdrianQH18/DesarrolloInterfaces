@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Incluye la hoja de estilos para estructura y estilos Flexbox -->
+    <link rel="stylesheet" href="estiloFlexBox.css">
+    <!-- Incluye el archivo JS que controla cambios dinámicos -->
+    <script src="flexBox.js"></script>
+</head>
+<body>
+    <!-- Contenedor Flex principal con items clicables -->
+    <div class="contenedor">
+        <div class="elemento e1" onclick="modificar(this)">1</div>
+        <div class="elemento e2" onclick="modificar(this)">2</div>
+        <div class="elemento e3" onclick="modificar(this)">3</div>
+        <div class="elemento e4" onclick="modificar(this)">4</div>
+    </div>
+
+    <!-- Panel para modificar las propiedades principales del Flexbox -->
+    <div id="propCont">
+        <fieldset>
+            <legend>Propiedades contenedor:</legend>
+
+            <!-- Cambia la dirección del flex -->
+            <label for="camFDir"><code>flex-direction:</code></label>
+            <button id="camFDir" onclick="cambiarFlexDirection()">row</button>
+            <br><br>
+
+            <!-- Modifica si el contenido envuelve o no -->
+            <label for="camFWr"><code>flex-wrap:</code></label>
+            <button id="camFWr" onclick="cambiarFlexWrap()">nowrap</button>
+            <br><br>
+
+            <!-- Justifica horizontalmente -->
+            <label for="camJCnt"><code>justify-content:</code></label>
+            <button id="camJCnt" onclick="cambiarJustifyContent()">flex-start</button>
+            <br><br>
+
+            <!-- Alineación vertical -->
+            <label for="camAIt"><code>align-items:</code></label>
+            <button id="camAIt" onclick="cambiarAlignItems()">flex-start</button>
+            <br><br>
+
+            <!-- Alinea varias líneas si hay wrap; inicialmente deshabilitado -->
+            <label for="camAC"><code>align-content:</code></label>
+            <button id="camAC" onclick="cambiarAlignContent()" disabled>flex-start</button>
+            <br><br>
+        </fieldset>
+    </div>
+</body>
+</html>

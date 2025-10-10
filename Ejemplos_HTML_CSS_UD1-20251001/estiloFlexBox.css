@@ -1,0 +1,18 @@
+.contenedor {
+	display: flex;
+	width: 80%;
+	background-color: #8d6d6d;
+}
+.elemento {
+	background-color: #000000;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	color:rgb(0, 250, 0);
+	font-weight: bolder;
+	text-align: center;
+	line-height: 100px;
+}
+.elemento:hover {
+	background-color: #ffee00;
+}
