@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+/*CONTENEDOR PRINCIPAL*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px auto 40px;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+  height: 100vh;
+  gap: 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #1e293b;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar button {
+  padding: 10px;
+  background: #334155;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sidebar button:hover {
+  background: #475569;
+  transform: scale(1.05);
+}
+
+.header {
+  grid-area: header;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(3, 200px);
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+}
+
+.main div {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.4s ease;
+}
+
+
+img:hover {
+  transform: scale(1.08);
+}
+
+/* --- POSICIONES ESPECIALES --- */
+.item-a { grid-row: 1 / 3; }
+.item-b { grid-column: 3 / 5; }
+.item-c { grid-row: 2 / 4; }
+.item-d { grid-column: 3 / 5; }
+
+
+.footer {
+  grid-area: footer;
+  background: #1e293b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .sidebar {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .main {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
+  }
+}
