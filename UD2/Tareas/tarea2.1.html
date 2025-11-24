@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        //Sumar dos números +
+        let operacion = 2 + 2;
+        console.log("Suma de 2 + 2 = " + operacion);
+        // Restar dos números -
+        operacion = 4 - 2;
+        console.log("Resta de 4 - 2 = " + operacion);
+        // Multiplicar dos números *
+        operacion = 4 * 4;
+        console.log("Multiplicar 4 x 4 = " + operacion);
+        // Dividir dos números /
+        operacion = 5 / 3;
+        console.log("División de 5 / 3 = " + operacion);
+        // Modulo de la división de 2 números (Nos devuelve el resto de unadivisión)
+        operacion = 5 % 3;
+        console.log("El resto de la división de 5 / 3 es: " + operacion);
+
+        // Incrementar un número ++
+        console.log("Al incrementar el resultado anterior nos daría:" + (++operacion));
+        console.log("Si el operador de incremento lo pongo como sufijo, primero me devuelve el valor: " + (operacion++) + " y luego realizaría el incremento quedando así: " + operacion);
+        // El decremento funcionaría de manera similar, utilizando "operacion--" o "--operacion“
+        // Todos estos operandos los puedo añadir como prefijo de una asignación quedando así
+        let operacionAsignacion = 2; operacionAsignacion += 3; operacion = 2 + 3;
+        console.log("Si x = 2, y = 3")
+        console.log("Sería lo mismo utilizar 'x += y' (" + operacionAsignacion + ") que hacerlo así 'x = x + y' (" + operacion + ")");
+
+       
+/*
+
+ // Comparamos valor y tipo de dato
+        let comparacion = (2 === "2");
+        console.log("Como no sabemos inicialmente el tipo de datos que contiene una variable en JavaScript");
+        console.log("Si queremos sabe si el contenido de una variable tiene el mismo valor y es del mismo tipo, utilizaremos el operador ‘==='");
+        console.log("Como por ejemplo comprobar si ‘2 === 2’ siendo ambos números enteros, esto devolvería:" + comparacion);
+        
+// Otros operandos de comparación
+< → menor que
+            > → mayor que
+                <= → menor o igual que
+                    >= → mayor o igual qu
+*/
+
+
+         //Comparamos desigualdad
+        //console.log("De la misma forma sucede con la desigualdad usando‘!==’ para valor y tipo, y ‘!=’ sólo para valor");
+        //let comparacion = (2 !== 3);
+        //console.log("Como por ejemplo comprobar si‘2 !== 3’:"+comparacion);
+        let comparacion = (2 != 3);
+        console.log("Y como por ejemplo comprobar si‘2 != 3’:"+comparacion);
+    </script>
+</head>
+
+</html>

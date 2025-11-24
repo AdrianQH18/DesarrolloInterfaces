@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        /*        // Operadores lógicos que responden a la combinación de diferentes valores "Booleanos“
+                // AND Lógico
+                let comparacion = (true && true);
+                console.log("Si queremos comprobar que dos condiciones son ambas verdades utilizaremos el operador '&&'(AND lógico)");
+                console.log("Como por ejemplo comprobar ('true' && 'true') que devolvería devolver: " + comparacion);
+                console.log("NOTA: Cualquier otra combinación de valores booleanos con el AND lógico devolvería FALSE");
+        
+                // OR Lógico
+                Comparacion = (false || false);
+                console.log("Si dos condiciones son ambas y también por separado FALSAS utilizaremos el operador '||'(OR lógico)");
+                console.log('Como por ejemplo comprobar ("false" || "false") que devolvería devolver: ' + comparacion);
+                console.log("NOTA: Cualquier otra combinación de valores booleanos con el OR lógico devolvería TRUE");
+        
+                // Operadores lógicos que responden a la combinación de diferentes valores "Booleanos“
+                // NOT lógico
+                Comparacion2 = ! true;
+                console.log("Si queremos invertir el valor de una comparación a su valor complementario (pasar el TRUE a FALSE) y viceversa utilizaremos el operador '!' (NOT lógico)");
+                console.log('Como por ejemplo comprobar (!"true") que devolvería devolver: ' + comparacion);
+        
+                // El operador "typeof" devolverá el tipo de dato del valor que contiene la variable
+                let variable = "Hola";
+                console.log("El operador 'typeof' devolverá el tipo de dato del valor que contiene la variable");
+                console.log("Por ejemplo el valor de la variable llamada 'variable' es :" + variable);
+                console.log("Y al llamar a 'typeof(variable)' me indica que es del tipo: " + typeof (variable));
+                // El operador "instanceof" devolverá verdadero si un objeto es una instancia de un tipo de objeto
+                console.log("El operador 'instanceof' devolverá verdadero si un objeto es una instancia de un tipo de objeto");
+                let fecha = new Date();
+                console.log('Por ejemplo al llamar a (fecha instanceof Date) devolverá: ' + (fecha instanceof Date));
+        
+                // El + también se puede usar para agregar cadenas (concatenar)
+                let variable1 = "Hola";
+                let variable2 = " ¿qué tal?";
+                console.log(variable + variable2);
+                // Y si uno de los dos operandos del + es una cadena, seguirá concatenando la cadena al valor del otro operando
+                let numero = 2;
+                console.log("Sumando " + numero + " y " + numero + ". ¿Cuánto da?");
+                // Un String se puede crear como primitivas, a partir de literales de cadena o como objetos, ó usando el constructor String ():
+                let texto = new String("Un objeto String");
+                // Esto permite que cualquier String (literales u objetos) puedan utilizar los métodos y propiedades de esta clase.
+                console.log(variable + " ¿contiene la letra \"a\"? " + (variable.includes('a')));
+                console.log("¿Cuántos caracteres tiene el texto \"" + variable2 + "\"? " + (variable2.length));
+                
+        
+                // Utilizaremos una sentencia "if" para especificar un bloque de código// que se debe ejecutar cuándo la condición sea verdadera
+                if (true) {
+                    console.log("La condición del \"if\" fue verdadera.");
+                }
+                // Use la instrucción "else" para especificar un bloque de código que se // ejecutará si la condición es falsa.
+                if (false) {
+                    console.log("Este mensaje no se mostrará nunca al ser la condición falsa.");
+                }
+                else {
+                    console.log("Se muestra este mensaje porque la condición del \"if\" fue falsa y este mensaje está dentro del \"else\"");
+                }
+                // Use la instrucción "else if" para especificar una nueva condición si la primera condición es falsa.
+                let condicion1 = 5, condicion2 = 2;
+                if (condicion1>condicion2) {
+                    console.log("Condicion es mayor que la condicion2");
+                }
+                else if (condicion2>condicion1) {
+                    console.log("Condicion2 es mayor que la condicion1");
+                }
+                else {
+                    console.log("Las 2 condiciones son iguales");
+                }
+                
+
+        // Use la instrucción "Switch" para seleccionar uno de los muchos bloques de código que se ejecutará.
+        // NOTA: Para que una vez que encuentre la coincidencia de valor, no sigua ejecutando el resto de instrucciones
+        // que le siguen, aunque sean de otros valores que no coincidan, hay que poner la sentencia "break;“
+        // El método "getDay()" de un objeto "Date" devuelve el día de la semana como un número entre 0 y 6.
+        let dia;
+        switch (new Date().getDay()) {
+            case 0:
+                dia = "Domingo";
+                break;
+            case 1:
+                dia = "Lunes";
+                break;
+            case 2:
+                dia = "Martes";
+                break;
+            case 3:
+                dia = "Miércoles";
+                break;
+            case 4:
+                dia = "Jueves";
+                break;
+            case 5:
+                dia = "Viernes";
+                break;
+            case 6:
+                dia = "Sábado";
+                break
+        }
+        console.log(dia);
+        
+
+        // El bucle "while" ejecutará su bloque de código después de comprobar que su condición es "true“
+        // Y una vez ejecutado su bloque de código repetira el proceso, comprueba su condición, y si ésta
+        // es "true" volverá a ejecutar su bloque de código. Este proceso se repetirá, hasta que la condición
+        // devuelva "false" o dentro del código se ejecute la sentencia "break;"
+        console.log("Mostraremos los números, pares del 1 al 10:");
+        let numero = 1;
+        while (numero <= 10) {
+            if ((numero % 2) == 0) {
+                console.log("Número " + numero);
+            }
+            numero++;
+        }
+        // El bucle "do while" es una variante del "while", actua exactamente igual, salvo que la
+        //comprobación de su condición se realizará trás ejecutar el bloque de código.
+        console.log("Mostraremos los números, impares del 1 al 10:");
+        numero = 1;
+        do {
+            if ((numero % 2) != 0) {
+                console.log("Número " + numero);
+            }
+            numero++;
+        } while (numero <= 10);
+        */
+
+        // El bucle "for" lo utilizaremos para repetir un bloque de código un número determinado de veces
+        let numero;
+        console.log("Mostraremos los números, múltiplos de 3 del 1 al 10");
+        for (let i = 1; i <= 10; i++) {
+            if ((numero % 3) == 0) {
+                console.log("Número " + numero);
+            }
+        }
+        // Podemos utilizar el bucle "for in" para:
+        // 1.- Recorrer las propiedades de un objeto
+        const persona = { nombre: "Juan", apellido: "Nadie", edad: 25 };
+        let texto = "";
+        for (let x in persona) {
+            texto += persona[x];
+            texto += " ";
+        }
+        console.log(texto);
+        // 2.- Recorrer los elementos de un array
+        const numerosPrimitiva = [1, 10, 18, 21, 30, 3];
+        let numeros = "";
+        for (let x in numerosPrimitiva) {
+            numeros += numerosPrimitiva[x];
+            numeros += " ";
+        }
+        // String.substring(posicionCaracterInicio, PosicionCaracterFin)
+        // el carácter posicionado en "PosiionCaracterFin" no se incluirá en la subcadena generada.
+        console.log("Mi apuesta de la primitiva es: " + numeros.substring(0, (numeros.length - 1)));
+    </script>
+</head>
+
+</html>
